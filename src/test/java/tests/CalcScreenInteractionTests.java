@@ -119,4 +119,13 @@ public class CalcScreenInteractionTests extends TestBase {
                 .$(MobileBy.className("android.widget.EditText"))
                 .shouldHave(Condition.text("1 + (1 + 1)"));
     }
+
+    @Test
+    void themesInteractionTest() {
+
+        $(MobileBy.id("com.candl.athena:id/themes")).click();
+        $(MobileBy.id("com.candl.athena:id/toolbar_themes"))
+                .$(MobileBy.className("android.widget.TextView"))
+                .shouldHave(Condition.text("Themes"));
+    }
 }

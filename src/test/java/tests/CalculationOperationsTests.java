@@ -1,0 +1,34 @@
+package tests;
+
+import com.codeborne.selenide.Condition;
+import io.appium.java_client.MobileBy;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+import static com.codeborne.selenide.Selenide.$;
+
+public class CalculationOperationsTests extends TestBase {
+
+    @CsvSource(value = {
+            "1, 1"
+    })
+    @ParameterizedTest
+    void additionOfTwoOperationTest(Integer number1, Integer number2) {
+
+        Integer sum = number1 + number2;
+
+        $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
+                .$(MobileBy.className("android.widget.EditText"))
+                .setValue(number1.toString());
+        $(MobileBy.id("com.candl.athena:id/plus")).click();
+        $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
+                .$(MobileBy.className("android.widget.EditText"))
+                .setValue(number2.toString());
+        $(MobileBy.id("com.candl.athena:id/equal")).click();
+
+        $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
+                .$(MobileBy.className("android.widget.EditText"))
+                .shouldHave(Condition.text(sum.toString()));
+    }
+}
