@@ -1,13 +1,14 @@
-package tests;
+package tests.browserstack;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import tests.simulator.SimulatorTestBase;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class CalculationOperationsTests extends TestBase {
+public class BrowserstackCalculationOperationsTests extends BrowserstackTestBase {
 
     @CsvSource(value = {
             "1, 1"

@@ -1,4 +1,4 @@
-package tests;
+package tests.simulator;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static com.codeborne.selenide.Selenide.$;
 
-public class TestBase {
+public class SimulatorTestBase {
 
     @BeforeAll
     public static void setup() {

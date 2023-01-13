@@ -1,4 +1,4 @@
-package tests;
+package tests.simulator;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class CalcScreenInteractionTests extends TestBase {
+public class SimulatorCalcScreenInteractionTests extends SimulatorTestBase {
 
     @Test
     void numberInteractionTest() {

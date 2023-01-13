@@ -1,12 +1,13 @@
-package tests;
+package tests.browserstack;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
 import org.junit.jupiter.api.Test;
+import tests.simulator.SimulatorTestBase;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class SideMenuElementPresenceTests extends TestBase {
+public class BrowserstackSideMenuElementPresenceTests extends BrowserstackTestBase {
 
     @Test
     void sideMenuElementPresenceTest() {
