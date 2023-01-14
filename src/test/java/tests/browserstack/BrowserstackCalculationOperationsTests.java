@@ -143,8 +143,15 @@ public class BrowserstackCalculationOperationsTests extends BrowserstackTestBase
 
         $(MobileBy.id("com.candl.athena:id/equal")).click();
 
-        $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
-                .$(MobileBy.className("android.widget.EditText"))
-                .shouldHave(Condition.text(result.toString()));
+        if (result - result.intValue() == 0) {
+            Integer integeredResult = result.intValue();
+            $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
+                    .$(MobileBy.className("android.widget.EditText"))
+                    .shouldHave(Condition.text(integeredResult.toString()));
+        } else {
+            $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
+                    .$(MobileBy.className("android.widget.EditText"))
+                    .shouldHave(Condition.text(result.toString()));
+        }
     }
 }
