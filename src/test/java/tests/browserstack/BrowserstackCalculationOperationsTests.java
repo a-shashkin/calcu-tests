@@ -123,14 +123,22 @@ public class BrowserstackCalculationOperationsTests extends BrowserstackTestBase
 
         char[] digitsOfNumber1 = String.valueOf(number1).toCharArray();
         for (int i = 0; i < digitsOfNumber1.length; i++) {
-            $(MobileBy.id(format("com.candl.athena:id/digit%s", digitsOfNumber1[i]))).click();
+            if (digitsOfNumber1[i] == '.') {
+                $(MobileBy.id("com.candl.athena:id/dot")).click();
+            } else {
+                $(MobileBy.id(format("com.candl.athena:id/digit%s", digitsOfNumber1[i]))).click();
+            }
         }
 
         $(MobileBy.id("com.candl.athena:id/div")).click();
 
         char[] digitsOfNumber2 = String.valueOf(number2).toCharArray();
         for (int i = 0; i < digitsOfNumber2.length; i++) {
-            $(MobileBy.id(format("com.candl.athena:id/digit%s", digitsOfNumber2[i]))).click();
+            if (digitsOfNumber1[i] == '.') {
+                $(MobileBy.id("com.candl.athena:id/dot")).click();
+            } else {
+                $(MobileBy.id(format("com.candl.athena:id/digit%s", digitsOfNumber2[i]))).click();
+            }
         }
 
         $(MobileBy.id("com.candl.athena:id/equal")).click();
