@@ -31,6 +31,9 @@ public class BrowserstackTestBase {
     @BeforeEach
     public void startDriver() {
         open();
+        if ($(MobileBy.id("com.candl.athena:id/consent_activity_no_button")).is(Condition.visible)) {
+            $(MobileBy.id("com.candl.athena:id/consent_activity_no_button")).click();
+        }
         if ($(MobileBy.id("com.candl.athena:id/view_pager")).is(Condition.visible)) {
             $(MobileBy.id("com.candl.athena:id/quick_tips_skip_text")).click();
         }

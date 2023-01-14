@@ -47,9 +47,9 @@ public class BrowserstackDriver implements WebDriverProvider {
         desiredCapabilities.setCapability("os_version", osVersion);
 
         // Set other BrowserStack capabilities
-        desiredCapabilities.setCapability("project", "Browserstack Appium Project");
-        desiredCapabilities.setCapability("build", "browserstack-build-2");
-        desiredCapabilities.setCapability("name", "appium_test");
+        desiredCapabilities.setCapability("project", project);
+        desiredCapabilities.setCapability("build", build);
+        desiredCapabilities.setCapability("name", name);
 
         return new AndroidDriver(getBrowserstackURL(), desiredCapabilities);
     }
