@@ -7,6 +7,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -14,6 +15,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 @Feature("Calculation screen")
 @Owner("allure8")
+@Tag("simulator")
 public class SimulatorCalculationOperationsTests extends SimulatorTestBase {
 
     @CsvSource(value = {

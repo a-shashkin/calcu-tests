@@ -53,3 +53,15 @@ tasks.withType(Test) {
         }
     }
 }
+
+task browserstack(type: Test) {
+    useJUnitPlatform {
+        includeTags "browserstack"
+    }
+}
+
+task simulator(type: Test) {
+    useJUnitPlatform {
+        includeTags "simulator"
+    }
+}
