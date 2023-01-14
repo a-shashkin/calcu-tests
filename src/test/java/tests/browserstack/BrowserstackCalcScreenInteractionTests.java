@@ -2,14 +2,24 @@ package tests.browserstack;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import tests.simulator.SimulatorTestBase;
 
 import static com.codeborne.selenide.Selenide.$;
 
+@Feature("Calculation screen")
+@Owner("allure8")
 public class BrowserstackCalcScreenInteractionTests extends BrowserstackTestBase {
 
     @Test
+    @AllureId("14269")
+    @Story("Interaction with elements")
+    @DisplayName("Interaction with numbers")
     void numberInteractionTest() {
 
         $(MobileBy.id("com.candl.athena:id/digit1")).click();
@@ -75,6 +85,9 @@ public class BrowserstackCalcScreenInteractionTests extends BrowserstackTestBase
     }
 
     @Test
+    @AllureId("14270")
+    @Story("Interaction with elements")
+    @DisplayName("Interaction with math operations")
     void mathOperationsInteractionTest() {
 
         $(MobileBy.id("com.candl.athena:id/digit1")).click();
@@ -107,6 +120,9 @@ public class BrowserstackCalcScreenInteractionTests extends BrowserstackTestBase
     }
 
     @Test
+    @AllureId("14271")
+    @Story("Interaction with elements")
+    @DisplayName("Interaction with parentheses")
     void parenthesesInteractionTest() {
 
         $(MobileBy.id("com.candl.athena:id/digit1")).click();
@@ -122,6 +138,9 @@ public class BrowserstackCalcScreenInteractionTests extends BrowserstackTestBase
     }
 
     @Test
+    @AllureId("14272")
+    @Story("Interaction with elements")
+    @DisplayName("Interaction with themes")
     void themesInteractionTest() {
 
         $(MobileBy.id("com.candl.athena:id/themes")).click();

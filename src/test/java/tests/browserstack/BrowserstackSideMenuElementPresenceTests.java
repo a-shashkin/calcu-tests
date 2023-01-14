@@ -2,14 +2,24 @@ package tests.browserstack;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import tests.simulator.SimulatorTestBase;
 
 import static com.codeborne.selenide.Selenide.$;
 
+@Feature("Side menu")
+@Owner("allure8")
 public class BrowserstackSideMenuElementPresenceTests extends BrowserstackTestBase {
 
     @Test
+    @AllureId("14268")
+    @Story("Presence of elements")
+    @DisplayName("Presence of menu elements")
     void sideMenuElementPresenceTest() {
 
         $(MobileBy.id("com.candl.athena:id/hamburger_image")).click();

@@ -2,13 +2,23 @@ package tests.simulator;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 
+@Feature("Calculation screen")
+@Owner("allure8")
 public class SimulatorCalcScreenElementPresenceTests extends SimulatorTestBase {
 
     @Test
+    @AllureId("14265")
+    @Story("Presence of elements")
+    @DisplayName("Presence of calculation display elements")
     void calculationDisplayPresenceTest() {
 
         $(MobileBy.id("com.candl.athena:id/layout_display")).shouldBe(Condition.visible);
@@ -17,6 +27,9 @@ public class SimulatorCalcScreenElementPresenceTests extends SimulatorTestBase {
     }
 
     @Test
+    @AllureId("14266")
+    @Story("Presence of elements")
+    @DisplayName("Presence of buttons panel")
     void panelButtonsPresenceTest() {
 
         $(MobileBy.id("com.candl.athena:id/themes")).shouldBe(Condition.visible);
@@ -46,6 +59,9 @@ public class SimulatorCalcScreenElementPresenceTests extends SimulatorTestBase {
 
     // If testing ads-free version, should disable this test.
     @Test
+    @AllureId("14267")
+    @Story("Presence of elements")
+    @DisplayName("Presence of ads block in free version")
     void adsPresenceTest() {
 
         $(MobileBy.id("com.candl.athena:id/ads_bottom")).shouldBe(Condition.visible);
