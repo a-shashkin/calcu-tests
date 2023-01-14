@@ -29,8 +29,9 @@ public class BrowserstackTestBase {
     }
 
     @BeforeEach
-    public void startDriver() {
+    public void startDriver() throws InterruptedException {
         open();
+        Thread.sleep(4000);
         if ($(MobileBy.id("com.candl.athena:id/consent_activity_no_button")).is(Condition.visible)) {
             $(MobileBy.id("com.candl.athena:id/consent_activity_no_button")).click();
         }
