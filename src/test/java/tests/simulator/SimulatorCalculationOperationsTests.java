@@ -12,6 +12,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static com.codeborne.selenide.Selenide.$;
+import static java.lang.String.format;
 
 @Feature("Calculation screen")
 @Owner("allure8")
@@ -25,17 +26,22 @@ public class SimulatorCalculationOperationsTests extends SimulatorTestBase {
     @AllureId("14273")
     @Story("Calculations")
     @DisplayName("Addition")
-    void additionOfTwoNumbersTest(Integer number1, Integer number2) {
+    void additionOfTwoNumbersTest(int number1, int number2) {
 
         Integer result = number1 + number2;
 
-        $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
-                .$(MobileBy.className("android.widget.EditText"))
-                .setValue(number1.toString());
+        char[] digitsOfNumber1 = String.valueOf(number1).toCharArray();
+        for (int i = 0; i < digitsOfNumber1.length; i++) {
+            $(MobileBy.id(format("com.candl.athena:id/digit%s", digitsOfNumber1[i]))).click();
+        }
+
         $(MobileBy.id("com.candl.athena:id/plus")).click();
-        $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
-                .$(MobileBy.className("android.widget.EditText"))
-                .setValue(number2.toString());
+
+        char[] digitsOfNumber2 = String.valueOf(number2).toCharArray();
+        for (int i = 0; i < digitsOfNumber2.length; i++) {
+            $(MobileBy.id(format("com.candl.athena:id/digit%s", digitsOfNumber2[i]))).click();
+        }
+
         $(MobileBy.id("com.candl.athena:id/equal")).click();
 
         $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
@@ -50,17 +56,22 @@ public class SimulatorCalculationOperationsTests extends SimulatorTestBase {
     @AllureId("14274")
     @Story("Calculations")
     @DisplayName("Subtraction")
-    void subtractionOfTwoNumbersTest(Integer number1, Integer number2) {
+    void subtractionOfTwoNumbersTest(int number1, int number2) {
 
         Integer result = number1 - number2;
 
-        $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
-                .$(MobileBy.className("android.widget.EditText"))
-                .setValue(number1.toString());
+        char[] digitsOfNumber1 = String.valueOf(number1).toCharArray();
+        for (int i = 0; i < digitsOfNumber1.length; i++) {
+            $(MobileBy.id(format("com.candl.athena:id/digit%s", digitsOfNumber1[i]))).click();
+        }
+
         $(MobileBy.id("com.candl.athena:id/minus")).click();
-        $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
-                .$(MobileBy.className("android.widget.EditText"))
-                .setValue(number2.toString());
+
+        char[] digitsOfNumber2 = String.valueOf(number2).toCharArray();
+        for (int i = 0; i < digitsOfNumber2.length; i++) {
+            $(MobileBy.id(format("com.candl.athena:id/digit%s", digitsOfNumber2[i]))).click();
+        }
+
         $(MobileBy.id("com.candl.athena:id/equal")).click();
 
         $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
@@ -75,17 +86,22 @@ public class SimulatorCalculationOperationsTests extends SimulatorTestBase {
     @AllureId("14275")
     @Story("Calculations")
     @DisplayName("Multiplication")
-    void multiplicationOfTwoNumbersTest(Integer number1, Integer number2) {
+    void multiplicationOfTwoNumbersTest(int number1, int number2) {
 
         Integer result = number1 * number2;
 
-        $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
-                .$(MobileBy.className("android.widget.EditText"))
-                .setValue(number1.toString());
+        char[] digitsOfNumber1 = String.valueOf(number1).toCharArray();
+        for (int i = 0; i < digitsOfNumber1.length; i++) {
+            $(MobileBy.id(format("com.candl.athena:id/digit%s", digitsOfNumber1[i]))).click();
+        }
+
         $(MobileBy.id("com.candl.athena:id/mul")).click();
-        $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
-                .$(MobileBy.className("android.widget.EditText"))
-                .setValue(number2.toString());
+
+        char[] digitsOfNumber2 = String.valueOf(number2).toCharArray();
+        for (int i = 0; i < digitsOfNumber2.length; i++) {
+            $(MobileBy.id(format("com.candl.athena:id/digit%s", digitsOfNumber2[i]))).click();
+        }
+
         $(MobileBy.id("com.candl.athena:id/equal")).click();
 
         $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
@@ -100,17 +116,22 @@ public class SimulatorCalculationOperationsTests extends SimulatorTestBase {
     @AllureId("14276")
     @Story("Calculations")
     @DisplayName("Division")
-    void divisionOfTwoNumbersTest(Float number1, Float number2) {
+    void divisionOfTwoNumbersTest(float number1, float number2) {
 
         Float result = number1 / number2;
 
-        $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
-                .$(MobileBy.className("android.widget.EditText"))
-                .setValue(number1.toString());
+        char[] digitsOfNumber1 = String.valueOf(number1).toCharArray();
+        for (int i = 0; i < digitsOfNumber1.length; i++) {
+            $(MobileBy.id(format("com.candl.athena:id/digit%s", digitsOfNumber1[i]))).click();
+        }
+
         $(MobileBy.id("com.candl.athena:id/div")).click();
-        $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
-                .$(MobileBy.className("android.widget.EditText"))
-                .setValue(number2.toString());
+
+        char[] digitsOfNumber2 = String.valueOf(number2).toCharArray();
+        for (int i = 0; i < digitsOfNumber2.length; i++) {
+            $(MobileBy.id(format("com.candl.athena:id/digit%s", digitsOfNumber2[i]))).click();
+        }
+
         $(MobileBy.id("com.candl.athena:id/equal")).click();
 
         $(MobileBy.id("com.candl.athena:id/layout_input_holder"))
