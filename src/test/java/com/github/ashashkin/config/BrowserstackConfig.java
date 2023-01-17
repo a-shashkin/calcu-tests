@@ -1,4 +1,4 @@
-package config;
+package com.github.ashashkin.config;
 
 import org.aeonbits.owner.Config;
 

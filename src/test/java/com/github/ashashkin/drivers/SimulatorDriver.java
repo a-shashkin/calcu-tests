@@ -1,7 +1,7 @@
-package drivers;
+package com.github.ashashkin.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import config.SimulatorConfig;
+import com.github.ashashkin.config.SimulatorConfig;
 import io.appium.java_client.android.AndroidDriver;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;

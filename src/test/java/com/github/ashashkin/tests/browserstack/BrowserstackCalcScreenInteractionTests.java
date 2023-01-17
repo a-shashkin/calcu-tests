@@ -1,4 +1,4 @@
-package tests.browserstack;
+package com.github.ashashkin.tests.browserstack;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
@@ -9,7 +9,6 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tests.simulator.SimulatorTestBase;
 
 import static com.codeborne.selenide.Selenide.$;
 

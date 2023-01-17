@@ -1,4 +1,4 @@
-package tests.simulator;
+package com.github.ashashkin.tests.browserstack;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
@@ -14,8 +14,8 @@ import static com.codeborne.selenide.Selenide.$;
 
 @Feature("Side menu")
 @Owner("allure8")
-@Tag("simulator")
-public class SimulatorSideMenuElementPresenceTests extends SimulatorTestBase {
+@Tag("browserstack")
+public class BrowserstackSideMenuElementPresenceTests extends BrowserstackTestBase {
 
     @Test
     @AllureId("14268")

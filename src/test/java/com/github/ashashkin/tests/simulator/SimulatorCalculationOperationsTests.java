@@ -1,4 +1,4 @@
-package tests.browserstack;
+package com.github.ashashkin.tests.simulator;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
@@ -10,15 +10,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import tests.simulator.SimulatorTestBase;
 
 import static com.codeborne.selenide.Selenide.$;
 import static java.lang.String.format;
 
 @Feature("Calculation screen")
 @Owner("allure8")
-@Tag("browserstack")
-public class BrowserstackCalculationOperationsTests extends BrowserstackTestBase {
+@Tag("simulator")
+public class SimulatorCalculationOperationsTests extends SimulatorTestBase {
 
     @CsvSource(value = {
             "1, 1"

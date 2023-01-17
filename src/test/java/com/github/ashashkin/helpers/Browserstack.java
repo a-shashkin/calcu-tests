@@ -1,4 +1,4 @@
-package helpers;
+package com.github.ashashkin.helpers;
 
 import static io.restassured.RestAssured.given;
 

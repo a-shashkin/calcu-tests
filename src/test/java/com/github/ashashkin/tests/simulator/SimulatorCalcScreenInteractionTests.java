@@ -1,4 +1,4 @@
-package tests.simulator;
+package com.github.ashashkin.tests.simulator;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;

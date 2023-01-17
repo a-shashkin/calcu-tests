@@ -1,4 +1,4 @@
-package tests.simulator;
+package com.github.ashashkin.tests.browserstack;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
@@ -16,8 +16,8 @@ import static java.lang.String.format;
 
 @Feature("Calculation screen")
 @Owner("allure8")
-@Tag("simulator")
-public class SimulatorCalculationOperationsTests extends SimulatorTestBase {
+@Tag("browserstack")
+public class BrowserstackCalculationOperationsTests extends BrowserstackTestBase {
 
     @CsvSource(value = {
             "1, 1"

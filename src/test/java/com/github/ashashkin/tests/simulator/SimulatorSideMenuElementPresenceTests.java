@@ -1,4 +1,4 @@
-package tests.browserstack;
+package com.github.ashashkin.tests.simulator;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
@@ -9,14 +9,13 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tests.simulator.SimulatorTestBase;
 
 import static com.codeborne.selenide.Selenide.$;
 
 @Feature("Side menu")
 @Owner("allure8")
-@Tag("browserstack")
-public class BrowserstackSideMenuElementPresenceTests extends BrowserstackTestBase {
+@Tag("simulator")
+public class SimulatorSideMenuElementPresenceTests extends SimulatorTestBase {
 
     @Test
     @AllureId("14268")
